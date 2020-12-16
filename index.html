@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <link rel="stylesheet" href="style.css">
+      <title>Slider</title>
+  </head>
+  <body>
+    <div id="root">
+      <form class="" action="index.html" method="post">
+        <input type="text">
+        <button @click="add" type="button" name="button">ADD</button>
+      </form>
+      <ul id="compiti">
+        <li v-for="listaElemento in lista" :key="listaElemento"></li>
+      </ul>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
