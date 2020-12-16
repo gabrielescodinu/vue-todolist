@@ -30,9 +30,9 @@ let root = new Vue ({
       this.lista.splice(this.lista[i])
     },
     add(){
-      if (!this.input){
-        return;
-      }
+      // if (!this.input){
+      //   return;
+      // }
       this.lista.push(this.input);
     }
   }
