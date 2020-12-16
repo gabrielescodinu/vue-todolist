@@ -12,28 +12,22 @@
 let root = new Vue ({
   el: "#root",
   data: {
+    testo: "",
     lista: [
+      "Studiare VueJs",
+      "Studiare Jquery",
+      "Ripassare Css",
     ]
   },
-  // created: function (){
-  //   this.lista.forEach(listaElemento => {
-  //     const markup = `
-  //     <div>
-  //     <li>${listaElemento}<button @click="remove" type="button" name="button">REMOVE</button></li>
-  //     </div>
-  //     `;
-  //     compiti.insertAdjacentHTML('beforeend', markup);
-  //   });
-  // },
   methods: {
-    remove(){
-      this.lista.splice(this.lista[i])
+    remove(index){
+      this.lista.splice(index, 1)
     },
     add(){
-      // if (!this.input){
-      //   return;
-      // }
-      this.lista.push(this.input);
+      if (this.testo.length > 3) {
+        console.log(this.testo);
+        this.lista.push(this.testo);
+      }
     }
   }
 });

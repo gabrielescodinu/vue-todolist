@@ -11,13 +11,12 @@
     <div id="root">
       <img src="logo.png" alt="">
       <form class="" action="index.html" method="post">
-        <input type="text">
+        <input v-model="testo"  type="text">
         <button @click="add" type="button" name="button">ADD</button>
       </form>
       <h1>TODO LIST</h1>
       <ul id="compiti">
-        <li class="listaElemento" v-for="listaElemento in lista" :key="listaElemento"><i @click="remove" class="fas fa-trash-alt"></i></li>
-        <li class="listaElemento">test <i @click="remove" class="fas fa-trash-alt"></i></li>
+        <li v-for="(listaElemento, index) in lista" class="listaElemento"><i @click="remove(index)" class="fas fa-trash-alt"></i>{{listaElemento}}</li>
       </ul>
 
     </div>
