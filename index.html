@@ -12,12 +12,12 @@
       <img src="logo.png" alt="">
       <form class="" action="index.html" method="post">
         <input v-model="testo"  type="text">
-        <button @click="add" type="button" name="button">ADD</button>
+        <button @keyup= "add" @click="add" type="button" name="button">ADD</button>
       </form>
       <h1>TODO LIST</h1>
       <h3 v-if="this.lista.length == 0">Non ci sono nuovi compiti</h3>
-      <ul id="compiti" @keyup="add">
-        <li v-for="(listaElemento, index) in lista" class="listaElemento"><i @click="remove(index)" class="fas fa-trash-alt"></i>{{listaElemento}}</li>
+      <ul id="compiti">
+        <li v-for="(listaElemento, index) in lista" class="listaElemento"><a href="#"><i @click="remove(index)" class="fas fa-trash-alt"></i></a>{{listaElemento}}</li>
       </ul>
 
     </div>

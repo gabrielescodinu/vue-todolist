@@ -19,9 +19,8 @@ let root = new Vue ({
   },
   created: function () {
     document.addEventListener("keyup", e =>{
-      if(e.key === "ArrowRight") {
+      if(e.key == "ArrowRight") {
         this.add();
-        this.testo = "";
       }
     })
   },
