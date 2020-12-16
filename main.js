@@ -36,10 +36,5 @@ let root = new Vue ({
         this.testo = "";
       }
     },
-    // message(){
-    //   if (this.lista.length = 0) {
-    //     console.log("vuota");
-    //   }
-    // },
   }
 });
