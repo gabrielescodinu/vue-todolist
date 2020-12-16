@@ -9,12 +9,15 @@
   </head>
   <body>
     <div id="root">
+      <img src="logo.png" alt="">
       <form class="" action="index.html" method="post">
         <input type="text">
         <button @click="add" type="button" name="button">ADD</button>
       </form>
+      <h1>TODO LIST</h1>
       <ul id="compiti">
-        <li v-for="listaElemento in lista" :key="listaElemento"></li>
+        <li v-for="listaElemento in lista" :key="listaElemento"><i @click="remove" class="fas fa-trash-alt"></i></li>
+        <li class="listaElemento">test <i @click="remove" class="fas fa-trash-alt"></i></li>
       </ul>
 
     </div>

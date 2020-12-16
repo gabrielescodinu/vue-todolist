@@ -13,19 +13,18 @@ let root = new Vue ({
   el: "#root",
   data: {
     lista: [
-      "fai i compiti",
     ]
   },
-  created: function (){
-    this.lista.forEach(listaElemento => {
-      const markup = `
-      <div>
-      <li>${listaElemento}<button @click="remove" type="button" name="button">REMOVE</button></li>
-      </div>
-      `;
-      compiti.insertAdjacentHTML('beforeend', markup);
-    });
-  },
+  // created: function (){
+  //   this.lista.forEach(listaElemento => {
+  //     const markup = `
+  //     <div>
+  //     <li>${listaElemento}<button @click="remove" type="button" name="button">REMOVE</button></li>
+  //     </div>
+  //     `;
+  //     compiti.insertAdjacentHTML('beforeend', markup);
+  //   });
+  // },
   methods: {
     remove(){
       this.lista.splice(this.lista[i])
