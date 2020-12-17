@@ -18,7 +18,7 @@
       <h2>Compiti da fare</h2>
       <h3 v-if="this.lista.length == 0">Non ci sono nuovi compiti</h3>
       <ul id="compiti">
-        <li v-for="(listaElemento, index) in lista" class="listaElemento"><a href="#"><i @click="edit(index)" class="far fa-edit"></i></a><a href="#"><i @click="remove(index)" class="fas fa-check"></i></a>{{listaElemento}}</li>
+        <li v-for="(listaElemento, index) in lista" class="listaElemento"><a href="#"><i @click="edit()" class="far fa-edit"></i></a><a href="#"><i @click="remove(index)" class="fas fa-check"></i></a>{{listaElemento}}</li>
       </ul>
       <h2>Compiti finiti <a href="#"><i @click="deleteAll()" class="fas fa-trash-alt deleteAll"></i></a></h2>
       <h3 v-if="this.completati.length == 0">Hai finito i compiti</h3>

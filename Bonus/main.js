@@ -24,7 +24,6 @@ let root = new Vue ({
       "Ripassare Css",
     ],
     completati: [],
-    modifica: "",
   },
   methods: {
     remove(index){
@@ -43,8 +42,8 @@ let root = new Vue ({
       console.log(this.completati);
     },
     edit(index){
-      this.lista[index] = prompt("modifica il compito"),
-      //this.lista[index] = this.modifica;
+      this.lista[index] = prompt("modifica il compito");
+      this.lista.splice(index, 1);
       this.lista.push(this.lista[index]);
     },
   }
