@@ -48,3 +48,6 @@ img {
 .deleteAll:hover {
   color: grey;
 }
+.fa-edit {
+  margin-right: 30px;
+}
