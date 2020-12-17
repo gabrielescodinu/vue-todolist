@@ -42,9 +42,11 @@ let root = new Vue ({
       console.log(this.completati);
     },
     edit(index){
-      this.lista[index] = prompt("modifica il compito");
-      this.lista.splice(index, 1);
-      this.lista.push(this.lista[index]);
+      //this.lista[index] = prompt("modifica il compito");
+      //this.lista.splice(index, 1);
+      Vue.set(this.lista, index, prompt("modifica il compito"))
+      console.log(index, this.lista[index]);
+      //this.lista.push(this.lista[index]);
     },
   }
 });
