@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <link rel="stylesheet" href="style.css">
+      <title>Slider</title>
+  </head>
+  <body>
+    <div id="root">
+      <img src="logo.png" alt="">
+      <div class="form">
+        <input @keyup.enter= "add" v-model="testo"  type="text">
+        <button @click="add" type="button" name="button">ADD</button>
+      </div>
+      <h1>TODO LIST</h1>
+      <h2>Compiti da fare</h2>
+      <h3 v-if="this.lista.length == 0">Non ci sono nuovi compiti</h3>
+      <ul id="compiti">
+        <li v-for="(listaElemento, index) in lista" class="listaElemento"><a href="#"><i @click="remove(index)" class="fas fa-trash-alt"></i></a>{{listaElemento}}</li>
+      </ul>
+      <h2>Compiti finiti</h2>
+      <ul id="compiti">
+        <li v-for="(completatiElemento, index) in completati" class="listaElemento"><a href="#"></a>{{completatiElemento}}</li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

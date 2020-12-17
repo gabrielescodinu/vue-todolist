@@ -16,10 +16,13 @@ let root = new Vue ({
       "Studiare Jquery",
       "Ripassare Css",
     ],
+    completati: [],
   },
   methods: {
     remove(index){
-      this.lista.splice(index, 1)
+      this.completati.push(this.lista[index]);
+      this.lista.splice(index, 1);
+      console.log(this.lista[index]);
     },
     add(){
       if (this.testo.length > 3) {
