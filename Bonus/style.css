@@ -41,3 +41,10 @@ img {
   display: flex;
   flex-direction: row;
 }
+.deleteAll {
+  color: black;
+  padding-left: 20px;
+}
+.deleteAll:hover {
+  color: grey;
+}
